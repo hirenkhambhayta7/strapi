@@ -604,7 +604,7 @@ export interface ApiJobOpeningJobOpening extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    applyUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    applyUrl: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
