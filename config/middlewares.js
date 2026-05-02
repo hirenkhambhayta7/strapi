@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = ({ env }) => [
   'strapi::logger',
   'strapi::errors',
   {
@@ -16,7 +16,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://satvik.de', 'https://www.satvik.de', 'http://localhost:8080'],
+      origin: env.array('CORS_ORIGIN', ['https://satvik.de', 'https://www.satvik.de', 'http://localhost:8080']),
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
     },
