@@ -16,7 +16,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://satvik.de', 'https://www.satvik.de', 'http://localhost:8080'],
+      origin: ['https://satvik.de', 'https://www.satvik.de', 'https://api.satvik.de', 'http://localhost:8080', 'http://localhost:5173'],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
     },
